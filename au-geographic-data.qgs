@@ -1,0 +1,177 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.34.4-Prizren" projectname="AU Geographic Data">
+  <homePath path=""/>
+  <title>AU Geographic Data</title>
+  <autotransaction>0</autotransaction>
+  <evaluateDefaultValues>0</evaluateDefaultValues>
+  <trust>1</trust>
+  <projectCrs>
+    <spatialrefsys nativeFormat="Wkt">
+      <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Web mapping and visualisation."],AREA["World between 85.06°S and 85.06°N."],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
+      <projsrs>+proj=webmerc +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</projsrs>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customorder enabled="0"/>
+    <layer-tree-group name="Coffs Harbour" expanded="1" checked="Qt isChecked">
+      <layer-tree-layer name="Coffs - 地块边界" id="coffs_cadastre" expanded="1" checked="Qt isChecked"/>
+      <layer-tree-layer name="Coffs - 房产成交" id="coffs_sales" expanded="1" checked="Qt isChecked"/>
+      <layer-tree-layer name="Coffs - 在售房产" id="coffs_onsale" expanded="1" checked="Qt isChecked"/>
+      <layer-tree-layer name="Coffs - 空间汇总" id="coffs_summary" expanded="1" checked="Qt isChecked"/>
+      <layer-tree-layer name="Coffs - ABS邮编区" id="coffs_abs_poa" expanded="1" checked="Qt isChecked"/>
+    </layer-tree-group>
+    <layer-tree-layer name="AU Satellite Imagery" id="au_tiles" expanded="1" checked="Qt isChecked"/>
+  </layer-tree-group>
+  <projectlayers>
+    <maplayer type="raster" autoRefreshMode="NoRefresh" autoRefreshTime="0" maxScale="0" minScale="1e+08" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0">
+      <id>au_tiles</id>
+      <name>AU Satellite Imagery</name>
+      <datasource>/home/yy/qgis-data/au-tiles-local.xml</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>AU Satellite Imagery</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt">
+          <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Web mapping and visualisation."],AREA["World between 85.06°S and 85.06°N."],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
+          <projsrs>+proj=webmerc +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</projsrs>
+        </spatialrefsys>
+      </srs>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList band="1" useNoData="0"/>
+        <noDataList band="2" useNoData="0"/>
+        <noDataList band="3" useNoData="0"/>
+      </noData>
+      <rasterrenderer type="multibandcolor" opacity="1" alphaBand="-1" blueBand="3" greenBand="2" redBand="1">
+        <minMaxOrigin>
+          <limits>None</limits>
+          <extent>WholeRaster</extent>
+          <statAccuracy>Exact</statAccuracy>
+          <cumulativeCutLower>0.02</cumulativeCutLower>
+          <cumulativeCutUpper>0.98</cumulativeCutUpper>
+          <stdDevFactor>2</stdDevFactor>
+        </minMaxOrigin>
+      </rasterrenderer>
+    </maplayer>
+    <maplayer type="vector" autoRefreshMode="NoRefresh" autoRefreshTime="0" maxScale="0" minScale="1e+08" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0">
+      <id>coffs_cadastre</id>
+      <name>Coffs - 地块边界</name>
+      <datasource>/home/yy/qgis-data/coffs-harbour/layers/地块边界.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Coffs - 地块边界</layername>
+      <srs><spatialrefsys nativeFormat="Wkt"><wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]]</wkt></spatialrefsys></srs>
+      <provider>ogr</provider>
+      <vectorjoins/>
+      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0" enableorderby="0">
+        <symbols>
+          <symbol type="fill" frame_rate="10" clip_to_extent="1" alpha="1" name="0" force_rhr="0">
+            <data_defined_properties><Option type="Map"><Option type="QString" name="name" value=""/><Option name="properties"/><Option type="QString" name="type" value="collection"/></Option></data_defined_properties>
+            <layer type="SimpleFill" class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="125,139,143,100"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="50,50,50,200"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+    </maplayer>
+    <maplayer type="vector" autoRefreshMode="NoRefresh" autoRefreshTime="0" maxScale="0" minScale="1e+08" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0">
+      <id>coffs_sales</id>
+      <name>Coffs - 房产成交</name>
+      <datasource>/home/yy/qgis-data/coffs-harbour/layers/房产成交数据.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Coffs - 房产成交</layername>
+      <srs><spatialrefsys nativeFormat="Wkt"><wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]]</wkt></spatialrefsys></srs>
+      <provider>ogr</provider>
+      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0" enableorderby="0">
+        <symbols>
+          <symbol type="marker" frame_rate="10" clip_to_extent="1" alpha="1" name="0" force_rhr="0">
+            <layer type="SimpleMarker" class="circle" enabled="1" pass="0" locked="0">
+              <prop k="color" v="255,0,0,200"/>
+              <prop k="size" v="1.5"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,0"/>
+              <prop k="outline_style" v="no"/>
+            </layer>
+          </symbol>
+        </symbols>
+      </renderer-v2>
+    </maplayer>
+    <maplayer type="vector" autoRefreshMode="NoRefresh" autoRefreshTime="0" maxScale="0" minScale="1e+08" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0">
+      <id>coffs_onsale</id>
+      <name>Coffs - 在售房产</name>
+      <datasource>/home/yy/qgis-data/coffs-harbour/layers/在售地块房产.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Coffs - 在售房产</layername>
+      <srs><spatialrefsys nativeFormat="Wkt"><wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]]</wkt></spatialrefsys></srs>
+      <provider>ogr</provider>
+      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0" enableorderby="0">
+        <symbols>
+          <symbol type="marker" frame_rate="10" clip_to_extent="1" alpha="1" name="0" force_rhr="0">
+            <layer type="SimpleMarker" class="circle" enabled="1" pass="0" locked="0">
+              <prop k="color" v="255,170,0,255"/>
+              <prop k="size" v="3"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+            </layer>
+          </symbol>
+        </symbols>
+      </renderer-v2>
+    </maplayer>
+    <maplayer type="vector" autoRefreshMode="NoRefresh" autoRefreshTime="0" maxScale="0" minScale="1e+08" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0">
+      <id>coffs_summary</id>
+      <name>Coffs - 空间汇总</name>
+      <datasource>/home/yy/qgis-data/coffs-harbour/layers/空间汇总.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Coffs - 空间汇总</layername>
+      <srs><spatialrefsys nativeFormat="Wkt"><wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]]</wkt></spatialrefsys></srs>
+      <provider>ogr</provider>
+      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0" enableorderby="0">
+        <symbols>
+          <symbol type="fill" frame_rate="10" clip_to_extent="1" alpha="1" name="0" force_rhr="0">
+            <layer type="SimpleFill" class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop k="color" v="100,200,100,50"/>
+              <prop k="outline_color" v="0,100,0,200"/>
+              <prop k="outline_width" v="0.5"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+      </renderer-v2>
+    </maplayer>
+    <maplayer type="vector" autoRefreshMode="NoRefresh" autoRefreshTime="0" maxScale="0" minScale="1e+08" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0">
+      <id>coffs_abs_poa</id>
+      <name>Coffs - ABS邮编区</name>
+      <datasource>/home/yy/qgis-data/coffs-harbour/layers/ABS邮编区.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Coffs - ABS邮编区</layername>
+      <srs><spatialrefsys nativeFormat="Wkt"><wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]]</wkt></spatialrefsys></srs>
+      <provider>ogr</provider>
+      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0" enableorderby="0">
+        <symbols>
+          <symbol type="fill" frame_rate="10" clip_to_extent="1" alpha="1" name="0" force_rhr="0">
+            <layer type="SimpleFill" class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop k="color" v="70,130,180,30"/>
+              <prop k="outline_color" v="30,80,130,200"/>
+              <prop k="outline_width" v="0.8"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+      </renderer-v2>
+    </maplayer>
+  </projectlayers>
+</qgis>

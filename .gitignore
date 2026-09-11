@@ -1,0 +1,13 @@
+/*
+!/.gitignore
+!/*.md
+!/*.qgs
+!/tile-server.py
+!/au-tiles-local.xml
+!/scripts/
+!/scripts/**
+
+/scripts/__pycache__/
+*.pyc
+/scripts/*.log
+/scripts/*.bak
